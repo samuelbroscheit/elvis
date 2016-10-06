@@ -1,4 +1,4 @@
-# Path in which your corpora are stored
+# Path in which source_docs and the gold_standard are stored
 #
 # For example:
 #
@@ -7,7 +7,7 @@
 
 corpora_path = ''
 
-# Path to the documents in the source format (i.e. not the ltf.xml files)
+# Path in which the folders eng,spa,cmn are located the source format (i.e. not the ltf.xml files)
 #
 # For example:
 #
