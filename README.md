@@ -1,9 +1,8 @@
 # elvis
 
 Very lightweight annotation visualization for the EDL branch of TAC 2015/2016, just to 
-share something small and usefull with the community. This project was only a quick 
-and dirty helper for error analysis and is not intended to evolve into some full blown 
-visualization tool. 
+share something small and usefull with the community. This project is only intended a quick 
+and small helper for error analysis and is a full blown entity linking visualization tool. 
 
 ### Features
 
