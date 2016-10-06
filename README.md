@@ -6,7 +6,8 @@ is not a full blown entity linking visualization tool.
 
 ### Features
 
-Select from multiple system outputs
+Select from multiple system outputs to compare system performance.
+
 Shows annotation errors for: 
  - strong mention match
  - strong typed mention match
