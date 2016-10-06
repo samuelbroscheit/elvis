@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="/js/tac-viewer.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <link href="/css/navbar-fixed-top.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <title>TAC Document Viewer</title>
+  </head>
+
+  <body ng-app="myApp">
+
+
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TAC Viewer</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+                <div class="select-document-wrapper">
+                <select id="select-system-output" ng-controller="getSystemOutput">
+                    <option value=""> Select System Output </option>
+                    <option ng-repeat="item in systemOutputs" ng-bind="item.tag" ng-bind="item.id" value="[[item.id]]">[[item.tag]]</option>
+                </select>
+                </div>
+            </li>
+            <li>
+                <div class="select-document-wrapper">
+                <select id="select-document" ng-controller="getDocuments" disabled>
+                    <option value=""> Select Document </option>
+                    <optgroup ng-repeat="item in documents" label="[[item.langDomain]]">
+                            <option ng-repeat="file in item.files" ng-bind="file.tag" ng-bind="file.id" value="[[file.id]]">[[file.tag]]</option>
+                    </optgroup>
+                </select>
+                </div>
+            </li>
+            <li><a id="nextDocument" href="#" class="glyphicon glyphicon-play"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+       <div class="col-lg-2 sidebar affix">
+          <ul class="nav nav-sidebar">
+            <li><span id="truePositive" class="label label-success">TRUE POSITIVE</span></li>
+            <li><span id="falsePositiveNER" class="label label-warning">FALSE POSITIVE (NER)</span></li>
+            <li><span id="falsePositiveNERC" class="is_toggable label label-danger">CLASS ERROR (NERC)</span></li>
+            <li><span id="falsePositiveNERL" class="is_toggable label label-danger">LINK ERROR (NERL)</span></li>
+            <li><span id="falseNegativeNER" class="label label-default">FALSE NEGATIVE (NER)</span></li>
+          </ul>
+        </div>
+       <div class="col-lg-3">
+       </div>
+       <div class="col-lg-8 main">
+
+            <div class="jumbotron">
+                <p>
+                No system output or document loaded. Please select one from the dropdown menu in the navigation bar.
+                </p>
+            </div>
+
+
+            <div class="document-container">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                  </div>
+                  <div class="panel-body">
+                  </div>
+                </div>
+            </div>
+
+       </div> <!-- /main-->
+      </div> <!-- /row-->
+    </div> <!-- /container-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>-->
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

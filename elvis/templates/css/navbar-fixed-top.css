@@ -1,0 +1,22 @@
+
+#select-system-output { min-width: 200pt }
+
+body { min-height: 2000px; padding-top: 70px; }
+
+.select-document-wrapper { padding-top: 11px; padding-bottom: 11px; padding-left: 35px; padding-right: 5px}
+
+.document-container { display: none; }
+
+.container { max-width: 992px;}
+
+.label > .label {font-size: 100%; border-left: 1px; border-right: 1px; border-color: white; border-style: solid;}
+
+.errorclass-is-disabled { opacity : 0.5}
+
+.popover {max-width: 376px !important;}
+.popover-title {font-size: 7pt !important;}
+.popover-content {font-size: 8pt !important;}
+.popover-content td {padding-right: 10px;}
+
+.is_mention {cursor: pointer;}
+.is_toggable {cursor: pointer;}
