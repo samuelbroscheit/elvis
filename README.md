@@ -1,8 +1,8 @@
 # elvis
 
-Very lightweight annotation visualization for the EDL branch of TAC 2015/2016, just to 
-share something small and usefull with the community. This project is only intended a quick 
-and small helper for error analysis and is a full blown entity linking visualization tool. 
+Very lightweight annotation visualization for the EDL branch of TAC 2015/2016 that runs in 
+your browser. This project is only intended a quick and small helper for error analysis and 
+is not a full blown entity linking visualization tool. 
 
 ### Features
 
@@ -12,6 +12,8 @@ Shows annotation errors for:
  - strong typed mention match
  - strong linked mention match
  - select/deselect strong typed mention match and strong linked mention match
+ 
+![Screenshot](docs/screenshot.png?raw=true "Screenshot") 
  
 ### Usage
 
