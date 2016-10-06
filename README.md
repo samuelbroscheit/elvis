@@ -17,7 +17,7 @@ Shows annotation errors for:
  
 ### Usage
 
-Start by completing the configuration in elvis/config.py. 
+Start by completing the configuration in elvis/config.py (follow the explanations in the config).
 
 Start the server with
 
