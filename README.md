@@ -1,7 +1,7 @@
 # elvis
 
-Very lightweight annotation visualization for the EDL branch of TAC 2015/2016 that runs in 
-your browser. This project is only intended a quick and small helper for error analysis and 
+Very lightweight annotation visualization for the EDL branch of TAC 2015/2016 with a browser 
+UI. This project is only intended a quick and small helper for error analysis and 
 is not a full blown entity linking visualization tool. 
 
 ### Features
