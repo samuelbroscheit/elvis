@@ -13,7 +13,7 @@ Shows annotation errors for:
  - strong linked mention match
  - select/deselect strong typed mention match and strong linked mention match
  
-![Screenshot](docs/screenshot.png?raw=true "Screenshot") 
+![Screenshot](elvis/doc/screenshot.png?raw=true "Screenshot") 
  
 ### Usage
 
