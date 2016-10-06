@@ -5,7 +5,7 @@ share something small and usefull with the community. This project was only a qu
 and dirty helper for error analysis and is not intended to evolve into some full blown 
 visualization tool. 
 
-# Features
+## Features
 
 Select from multiple system outputs
 Shows annotation errors for: 
@@ -14,19 +14,21 @@ Shows annotation errors for:
  - strong linked mention match
  - select/deselect strong typed mention match and strong linked mention match
  
-# Usage
+## Usage
 
 Start by completing the configuration in elvis/config.py. 
 
 Start the server with
 
+```
 $ ./main.py
+```
 
-# Requirements
+## Requirements
 
 Only tested on Linux. Requires Python3, pandas and flask.
 
-# Issues
+## Issues
 
 To resolve the KBIDs to something human readable implement the function get_entity_name_from_id(entity_id) in utils.py.
 
