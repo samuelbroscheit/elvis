@@ -25,6 +25,14 @@ Start the server with
 $ ./main.py
 ```
 
+Which will produce the message (if you didn't change the host and port in config)
+
+```
+ * Running on http://127.0.0.1:33507/ (Press CTRL+C to quit)
+```
+
+Point your browser to http://127.0.0.1:33507/ to use elvis.
+
 ### Requirements
 
 Only tested on Linux. Requires Python3, pandas and flask.
