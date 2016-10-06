@@ -11,7 +11,7 @@ Shows annotation errors for:
  - strong mention match
  - strong typed mention match
  - strong linked mention match
- - select/deselect strong typed mention match and strong linked mention match
+ - select/deselect strong typed mention match and strong linked mention match (i.e. CLASS ERROR and LINK ERROR)
  
 ![Screenshot](doc/screenshot.png "Screenshot") 
  
