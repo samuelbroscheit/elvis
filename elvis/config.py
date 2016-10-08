@@ -50,6 +50,8 @@ system_output_file_name = ''
 # /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1710/entity_linking_out_001.tsv
 # ...
 #
+# But at the moment only one file per directory is assumed.
+#
 
 system_output_path = ''
 
