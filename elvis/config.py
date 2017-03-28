@@ -14,7 +14,7 @@ corpora_path = ''
 # documents_path = '/source_docs'
 #
 
-documents_path = '/source_docs'
+documents_path = corpora_path + '/source_docs'
 
 # Path to the gold mentions
 #
