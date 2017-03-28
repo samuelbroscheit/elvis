@@ -11,10 +11,10 @@ corpora_path = ''
 #
 # For example:
 #
-# documents_path = '/source_docs'
+# documents_path = '/home/bla/Projects/Entity_Linking/Data/Corpora/LDC2016E38_TAC_KBP_Entity_Discovery_and_Linking_Comprehensive_Training_and_Evaluation_Data_2014-2015/data/2015/eval/source_docs'
 #
 
-documents_path = corpora_path + '/source_docs'
+documents_path = ''
 
 # Path to the gold mentions
 #
@@ -27,9 +27,9 @@ gold_info_path = corpora_path + '/tac_kbp_2015_tedl_evaluation_gold_standard_ent
 
 # File name pattern to select the system output files
 #
-# For example if your files are named entity_linking_out_001.tsv, entity_linking_out_002.tsv, ...
+# For example if your files are named entity_linking_out.tsv
 #
-# system_output_file_name = 'entity_linking_out_*.tsv'
+# system_output_file_name = 'entity_linking_out.tsv'
 #
 
 system_output_file_name = ''
@@ -45,9 +45,9 @@ system_output_file_name = ''
 #
 # The following files will be found:
 #
-# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1610/entity_linking_out_001.tsv
-# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1610/entity_linking_out_002.tsv
-# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1710/entity_linking_out_001.tsv
+# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1610/entity_linking_out.tsv
+# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1610/entity_linking_out.tsv
+# /home/bla/Projects/Entity_Linking/Data/Evaluation/20160816-1710/entity_linking_out.tsv
 # ...
 #
 # But at the moment only one file per directory is assumed.

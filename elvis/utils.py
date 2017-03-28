@@ -11,11 +11,7 @@ def tac_results_reader(result_file_path, additional_column=False):
     yield ['Mention_String', 'Doc_Id', 'Begin', 'End', 'Mention', 'KBID', 'Entity_Type', 'Mention_Type']
     with open(result_file_path) as f:
         for line in f.readlines():
-            if additional_column:
-                source, mention_id, mention_string, doc_id_span, kbid, entity_type, mention_type, conf, A1, A2, A3, A4 = line.split("\t")
-            else:
-                source, mention_id, mention_string, doc_id_span, kbid, entity_type, mention_type, conf, A1, A2, A3 = line.split("\t")
-
+            source, mention_id, mention_string, doc_id_span, kbid, entity_type, mention_type = line.split('\t')[:7]
             doc_id, start, end = re.split('\:|\-', doc_id_span)
             yield [mention_string, doc_id, start, end, doc_id_span, kbid, entity_type, mention_type]
 

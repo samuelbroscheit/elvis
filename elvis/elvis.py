@@ -23,7 +23,7 @@ def get_mention_by_startindex_for_document(mentions_df: pd.DataFrame, doc: str):
 
 grouped_documents = []
 id = 0
-for lang in ['eng', 'spa', 'cmn']:
+for lang in ['eng', 'spa',]:
     for domain in ['newswire', 'discussion_forum']:
         if path.isdir(documents_path + '/' + lang + '/' + domain):
             files = []
@@ -31,10 +31,22 @@ for lang in ['eng', 'spa', 'cmn']:
                 if 'ltf' not in file:
                     id += 1
                     files.append({'id': lang + '/' + domain + '/' + file, 'tag': file})
-            grouped_documents.append(
-                {'langDomain': str.capitalize(lang) + ' ' + str.capitalize(domain), 'files': files})
+            grouped_documents.append({'langDomain': str.capitalize(lang) + ' ' + str.capitalize(domain), 'files': files})
         else:
             raise FileNotFoundError(documents_path + '/' + lang + '/' + domain + ' does not exist!')
+
+for lang in [ 'cmn']:
+    for domain in ['nw', 'df']:
+        if path.isdir(documents_path + '/' + lang + '/' + domain):
+            files = []
+            for file in os.listdir(documents_path + '/' + lang + '/' + domain):
+                if 'ltf' not in file:
+                    id += 1
+                    files.append({'id': lang + '/' + domain + '/' + file, 'tag': file})
+            grouped_documents.append({'langDomain': str.capitalize(lang) + ' ' + str.capitalize(domain), 'files': files})
+        else:
+            raise FileNotFoundError(documents_path + '/' + lang + '/' + domain + ' does not exist!')
+
 
 if id == 0:
     raise FileNotFoundError(
@@ -77,9 +89,7 @@ def get_document():
         if lang in ['eng', 'spa', 'cmn'] and domain in ['newswire', 'discussion_forum']:
             with open(documents_path + '/' + request.args.get('document'), 'r') as doc:
                 mention_by_startindex_gold = get_mention_by_startindex_for_document(gold_info, doc_id)
-                system_info = get_mentions_info(
-                    system_output_path + '/' + request_system_output + '/' + system_output_file_name,
-                    additional_column=True)
+                system_info = get_mentions_info(system_output_path + '/' + request_system_output + '/' + system_output_file_name)
                 mention_by_startindex_system = get_mention_by_startindex_for_document(system_info, doc_id)
                 result = []
                 end = []
